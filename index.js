@@ -11,7 +11,7 @@ function deepIteratorObjAndArrVersion(target) {
 function deepIteratorArrayOnlyVersion(target) {
   for (let i = 0; i < target.length; i++) {
     if (typeof target[i] === 'object') {
-      deepIterator2(target[i]);
+      deepIteratorArrayOnlyVersion(target[i]);
     } else {
       console.log(target[i]);
     }
